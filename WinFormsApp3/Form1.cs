@@ -7,7 +7,7 @@ namespace WinFormsApp3
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pushMeButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hello, World!");
         }
