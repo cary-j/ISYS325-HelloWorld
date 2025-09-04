@@ -31,8 +31,8 @@
             pushMeButton = new Button();
             HelloWordLabel = new Label();
             closeButton = new Button();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            carPicutureBox = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)carPicutureBox).BeginInit();
             SuspendLayout();
             // 
             // pushMeButton
@@ -49,7 +49,7 @@
             // 
             HelloWordLabel.AutoSize = true;
             HelloWordLabel.Font = new Font("Meiryo UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            HelloWordLabel.Location = new Point(316, 257);
+            HelloWordLabel.Location = new Point(321, 202);
             HelloWordLabel.Name = "HelloWordLabel";
             HelloWordLabel.Size = new Size(127, 26);
             HelloWordLabel.TabIndex = 1;
@@ -66,28 +66,29 @@
             closeButton.UseVisualStyleBackColor = true;
             closeButton.Click += closeButton_Click;
             // 
-            // pictureBox1
+            // carPicutureBox
             // 
-            pictureBox1.Image = ISYS325_HelloWorld.Properties.Resources.Blackcar;
-            pictureBox1.Location = new Point(246, 315);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(297, 88);
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
+            carPicutureBox.Image = ISYS325_HelloWorld.Properties.Resources.Blackcar;
+            carPicutureBox.Location = new Point(246, 315);
+            carPicutureBox.Name = "carPicutureBox";
+            carPicutureBox.Size = new Size(297, 123);
+            carPicutureBox.TabIndex = 3;
+            carPicutureBox.TabStop = false;
+            carPicutureBox.Click += this.carPicutureBox_Click;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox1);
+            Controls.Add(carPicutureBox);
             Controls.Add(closeButton);
             Controls.Add(HelloWordLabel);
             Controls.Add(pushMeButton);
             Name = "MainForm";
             Text = "My Application";
             Load += MainForm_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)carPicutureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -97,6 +98,6 @@
         private Button pushMeButton;
         private Label HelloWordLabel;
         private Button closeButton;
-        private PictureBox pictureBox1;
+        private PictureBox carPicutureBox;
     }
 }
