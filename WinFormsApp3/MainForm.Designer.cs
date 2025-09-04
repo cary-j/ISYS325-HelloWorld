@@ -32,12 +32,13 @@
             HelloWordLabel = new Label();
             closeButton = new Button();
             carPicutureBox = new PictureBox();
+            testTextBox = new TextBox();
             ((System.ComponentModel.ISupportInitialize)carPicutureBox).BeginInit();
             SuspendLayout();
             // 
             // pushMeButton
             // 
-            pushMeButton.Location = new Point(268, 65);
+            pushMeButton.Location = new Point(415, 12);
             pushMeButton.Name = "pushMeButton";
             pushMeButton.Size = new Size(237, 119);
             pushMeButton.TabIndex = 0;
@@ -49,7 +50,7 @@
             // 
             HelloWordLabel.AutoSize = true;
             HelloWordLabel.Font = new Font("Meiryo UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            HelloWordLabel.Location = new Point(321, 202);
+            HelloWordLabel.Location = new Point(466, 160);
             HelloWordLabel.Name = "HelloWordLabel";
             HelloWordLabel.Size = new Size(127, 26);
             HelloWordLabel.TabIndex = 1;
@@ -69,18 +70,28 @@
             // carPicutureBox
             // 
             carPicutureBox.Image = ISYS325_HelloWorld.Properties.Resources.Blackcar;
-            carPicutureBox.Location = new Point(246, 315);
+            carPicutureBox.Location = new Point(392, 223);
             carPicutureBox.Name = "carPicutureBox";
             carPicutureBox.Size = new Size(297, 123);
             carPicutureBox.TabIndex = 3;
             carPicutureBox.TabStop = false;
-            carPicutureBox.Click += this.carPicutureBox_Click;
+            carPicutureBox.Click += carPicutureBox_Click;
+            // 
+            // testTextBox
+            // 
+            testTextBox.Font = new Font("SimHei", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            testTextBox.Location = new Point(37, 43);
+            testTextBox.Name = "testTextBox";
+            testTextBox.Size = new Size(257, 55);
+            testTextBox.TabIndex = 4;
+            testTextBox.TextChanged += testTextBox_TextChanged;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(testTextBox);
             Controls.Add(carPicutureBox);
             Controls.Add(closeButton);
             Controls.Add(HelloWordLabel);
@@ -99,5 +110,6 @@
         private Label HelloWordLabel;
         private Button closeButton;
         private PictureBox carPicutureBox;
+        public TextBox testTextBox;
     }
 }

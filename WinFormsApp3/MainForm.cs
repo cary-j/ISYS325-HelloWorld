@@ -15,6 +15,9 @@ namespace WinFormsApp3
            HelloWordLabel.ForeColor = Color.Red;
            HelloWordLabel.Text = HElLO_MSG;
            carPicutureBox.Visible = !carPicutureBox.Visible;
+            
+            int test = int.Parse(testTextBox.Text);
+            HelloWordLabel.Text = test.ToString();
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -26,7 +29,10 @@ namespace WinFormsApp3
             HelloWordLabel.Text = CAR_MSG;
             carPicutureBox.Visible = !carPicutureBox.Visible;
         }
-
+        private void testTextBox_TextChanged(object sender, EventArgs e)
+        {
+            HelloWordLabel.Text = testTextBox.Text;
+        }
         private void MainForm_Load(object sender, EventArgs e)
         {
             HelloWordLabel.Text = "";
