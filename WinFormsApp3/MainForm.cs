@@ -1,40 +1,36 @@
-namespace WinFormsApp3
-{
-    public partial class MainForm : Form
-    {
+namespace WinFormsApp3 {
+    public partial class MainForm : Form {
         private const string HElLO_MSG = "Hello world!";
         private const string CAR_MSG = "Vroom Vroom!";
 
-        public MainForm()
-        {
+        public MainForm() {
             InitializeComponent();
         }
 
-        private void pushMeButton_Click(object sender, EventArgs e)
-        {
-           HelloWordLabel.ForeColor = Color.Red;
-           HelloWordLabel.Text = HElLO_MSG;
-           carPicutureBox.Visible = !carPicutureBox.Visible;
-            
-            int test = int.Parse(testTextBox.Text);
-            HelloWordLabel.Text = test.ToString();
+        private void pushMeButton_Click(object sender, EventArgs e) {
+            HelloWordLabel.ForeColor = Color.Red;
+            HelloWordLabel.Text = HElLO_MSG;
+            try {
+                decimal test = decimal.Parse(testTextBox.Text);
+                HelloWordLabel.Text = $"You are {test:0.00} years old.";
+            } catch {
+                MessageBox.Show("There was an exception!");
+            } finally {
+                carPicutureBox.Visible = !carPicutureBox.Visible;
+            }
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
-        {
+        private void closeButton_Click(object sender, EventArgs e) {
             this.Close();
         }
-        private void carPicutureBox_Click(object sender, EventArgs e)
-        {
+        private void carPicutureBox_Click(object sender, EventArgs e) {
             HelloWordLabel.Text = CAR_MSG;
             carPicutureBox.Visible = !carPicutureBox.Visible;
         }
-        private void testTextBox_TextChanged(object sender, EventArgs e)
-        {
+        private void testTextBox_TextChanged(object sender, EventArgs e) {
             HelloWordLabel.Text = testTextBox.Text;
         }
-        private void MainForm_Load(object sender, EventArgs e)
-        {
+        private void MainForm_Load(object sender, EventArgs e) {
             HelloWordLabel.Text = "";
         }
     }

@@ -26,13 +26,13 @@
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             pushMeButton = new Button();
             HelloWordLabel = new Label();
             closeButton = new Button();
             carPicutureBox = new PictureBox();
             testTextBox = new TextBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)carPicutureBox).BeginInit();
             SuspendLayout();
             // 
@@ -41,7 +41,7 @@
             pushMeButton.Location = new Point(415, 12);
             pushMeButton.Name = "pushMeButton";
             pushMeButton.Size = new Size(237, 119);
-            pushMeButton.TabIndex = 0;
+            pushMeButton.TabIndex = 9;
             pushMeButton.Text = "&Push me!";
             pushMeButton.UseVisualStyleBackColor = true;
             pushMeButton.Click += pushMeButton_Click;
@@ -53,7 +53,7 @@
             HelloWordLabel.Location = new Point(466, 160);
             HelloWordLabel.Name = "HelloWordLabel";
             HelloWordLabel.Size = new Size(127, 26);
-            HelloWordLabel.TabIndex = 1;
+            HelloWordLabel.TabIndex = 8;
             HelloWordLabel.Text = "HelloWord";
             // 
             // closeButton
@@ -83,14 +83,25 @@
             testTextBox.Location = new Point(37, 43);
             testTextBox.Name = "testTextBox";
             testTextBox.Size = new Size(257, 55);
-            testTextBox.TabIndex = 4;
+            testTextBox.TabIndex = 1;
+            testTextBox.Tag = "";
             testTextBox.TextChanged += testTextBox_TextChanged;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(37, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(28, 30);
+            label1.TabIndex = 0;
+            label1.Text = "&H";
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(testTextBox);
             Controls.Add(carPicutureBox);
             Controls.Add(closeButton);
@@ -111,5 +122,6 @@
         private Button closeButton;
         private PictureBox carPicutureBox;
         public TextBox testTextBox;
+        private Label label1;
     }
 }
